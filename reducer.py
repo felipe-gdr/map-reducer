@@ -1,5 +1,7 @@
 #!/usr/bin/env python
 
+import sys
+
 salesTotal = 0
 oldKey = None
 
