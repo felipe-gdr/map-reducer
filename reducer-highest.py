@@ -16,12 +16,15 @@ for line in sys.stdin:
     if oldKey and oldKey != thisKey:
         print "{0}\t{1}".format(oldKey, highestSale)
 
-        salesTotal = 0
+        highestSale = 0
 
     oldKey = thisKey
 
-    if thisSale > highestSale:
-        highestSale = thisSale
+    #print highestSale, oldKey, thisKey, thisSale
+
+    if float(thisSale) > float(highestSale):
+	#print "is highest", thisSale, highestSale
+        highestSale = float(thisSale)
 
 if oldKey != None:
     print "{0}\t{1}".format(oldKey, highestSale)
